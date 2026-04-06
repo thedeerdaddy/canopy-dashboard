@@ -42,7 +42,7 @@ export default function DashboardPage() {
                   {stat.label}
                 </div>
                 <div className="text-2xl font-semibold text-gray-900 mb-1">{stat.value}</div>
-                <div className="text-xs text-emerald-600 font-medium">{delta} this week</div>
+                <div className="text-xs text-emerald-600 font-medium">{stat.delta} this week</div>
               </div>
             ))}
           </div>
