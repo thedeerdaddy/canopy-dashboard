@@ -70,7 +70,7 @@ export default function OwnersPage() {
 
   async function approveAndSend(ownerId: string) {
     // TODO Phase 5: POST to /api/owners/[id]/send → Lindy → Gmail
-    setSent((prev) => new Set([...prev, ownerId]));
+    setSent((prev) => new Set(Array.from(prev).concat(ownerId)));
     const next = OWNERS.find((o) => !sent.has(o.id) && o.id !== ownerId && emails[o.id]);
     if (next) setSelected(next.id);
   }
